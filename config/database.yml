@@ -14,19 +14,19 @@ default: &default
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
-  password:
+  password: aliya
   socket: /var/run/mysqld/mysqld.sock
 
 development:
   <<: *default
-  database: source-5_4_1_development
+  database: rails_auth_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: source-5_4_1_test
+  database: rails_auth_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
